@@ -1,0 +1,11 @@
+  File "201123_zarr-fancy-indexing.py", line 7, in <module>
+    array[idx] = 1
+  File "/Users/amcg0011/miniconda3/lib/python3.8/site-packages/zarr/core.py", line 1115, in __setitem__
+    self.set_basic_selection(selection, value, fields=fields)
+  File "/Users/amcg0011/miniconda3/lib/python3.8/site-packages/zarr/core.py", line 1210, in set_basic_selection
+    return self._set_basic_selection_nd(selection, value, fields=fields)
+  File "/Users/amcg0011/miniconda3/lib/python3.8/site-packages/zarr/core.py", line 1499, in _set_basic_selection_nd
+    indexer = BasicIndexer(selection, self)
+  File "/Users/amcg0011/miniconda3/lib/python3.8/site-packages/zarr/indexing.py", line 282, in __init__
+    raise IndexError('unsupported selection item for basic indexing; '
+IndexError: unsupported selection item for basic indexing; expected integer or slice, got <class 'list'>

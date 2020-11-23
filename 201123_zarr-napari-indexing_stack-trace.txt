@@ -1,0 +1,29 @@
+ERROR:root:Unhandled exception:
+Traceback (most recent call last):
+  File "/Users/amcg0011/miniconda3/envs/napari-dev/lib/python3.8/site-packages/vispy/app/backends/_qt.py", line 443, in mousePressEvent
+    self._vispy_mouse_press(
+  File "/Users/amcg0011/miniconda3/envs/napari-dev/lib/python3.8/site-packages/vispy/app/base.py", line 181, in _vispy_mouse_press
+    ev = self._vispy_canvas.events.mouse_press(**kwargs)
+  File "/Users/amcg0011/miniconda3/envs/napari-dev/lib/python3.8/site-packages/vispy/util/event.py", line 455, in __call__
+    self._invoke_callback(cb, event)
+  File "/Users/amcg0011/miniconda3/envs/napari-dev/lib/python3.8/site-packages/vispy/util/event.py", line 473, in _invoke_callback
+    _handle_exception(self.ignore_callback_errors,
+  File "/Users/amcg0011/miniconda3/envs/napari-dev/lib/python3.8/site-packages/vispy/util/event.py", line 471, in _invoke_callback
+    cb(event)
+  File "/Users/amcg0011/GitRepos/napari/napari/_qt/qt_viewer.py", line 618, in on_mouse_press
+    mouse_press_callbacks(layer, event)
+  File "/Users/amcg0011/GitRepos/napari/napari/utils/interactions.py", line 101, in mouse_press_callbacks
+    next(gen)
+  File "/Users/amcg0011/GitRepos/napari/napari/layers/labels/_labels_mouse_bindings.py", line 33, in draw
+    layer.paint(layer.coordinates, new_label)
+  File "/Users/amcg0011/GitRepos/napari/napari/layers/labels/labels.py", line 842, in paint
+    self.data[slice_coord] = new_label
+  File "/Users/amcg0011/miniconda3/envs/napari-dev/lib/python3.8/site-packages/zarr/core.py", line 1115, in __setitem__
+    self.set_basic_selection(selection, value, fields=fields)
+  File "/Users/amcg0011/miniconda3/envs/napari-dev/lib/python3.8/site-packages/zarr/core.py", line 1210, in set_basic_selection
+    return self._set_basic_selection_nd(selection, value, fields=fields)
+  File "/Users/amcg0011/miniconda3/envs/napari-dev/lib/python3.8/site-packages/zarr/core.py", line 1499, in _set_basic_selection_nd
+    indexer = BasicIndexer(selection, self)
+  File "/Users/amcg0011/miniconda3/envs/napari-dev/lib/python3.8/site-packages/zarr/indexing.py", line 280, in __init__
+    raise IndexError('unsupported selection item for basic indexing; '
+IndexError: unsupported selection item for basic indexing; expected integer or slice, got <class 'numpy.ndarray'>

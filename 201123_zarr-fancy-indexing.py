@@ -1,5 +1,4 @@
 import zarr
-import numpy as np
 
 shape = (20, 20)
 array  = zarr.zeros(shape)
